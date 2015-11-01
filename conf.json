@@ -1,0 +1,20 @@
+{
+  "saved_conf_filename": "./changed_logstash.conf",
+  "log_file": "./test001.log",
+  "period": 3,
+  "logstash": {
+    "sentinel_master": "mymaster",
+    "sentinel": [
+      {"host": "10.1.1.200", "port": 5000},
+      {"host": "10.1.1.200", "port": 5001},
+      {"host": "10.1.1.200", "port": 5002}
+    ],
+    "ssh": {
+      "host": "10.1.1.200",
+      "port": 22,
+      "user": "shcho",
+      "id_file": ""
+    },
+    "conf_path": "/etc/logstash/conf.d/01-redis-input.conf"
+    }
+}
