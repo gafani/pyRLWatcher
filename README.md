@@ -11,8 +11,8 @@ Python 3.4.x or 2.7.x
 
 Runtime Environments
 --------------------
-OS: Windows7 x64
-Python: x64
+  - OS: Windows7 x64, Linux x64
+  - Python: x64 (2.7.x, 3.4.x)
 
 
 Depend on Python Packages
