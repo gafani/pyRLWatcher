@@ -1,5 +1,12 @@
 Elastic search with logstash Wacher
 ===================================
+
+This program to change master value in logstash config file when redis failover.
+
+That after is restart logstash daemon.
+
+redis is must be configure sentinel.
+
 이 프로그램은 logstash의 Input으로 Redis를 가지는 환경에서 Redis가 Failover 했을 때 logstash의 input값을 Redis의 Master로 변경한 후 재시작해주는 유틸성 프로그램이다.
 이 프로그램은 sentinel 3개와 redis master와 slave 두개로 구성한 환경. 그리고 이 redis cluster를 바라보고 input으로 가져오는 logstash master, slave 구성에서 redis master가 down되어 slave로 바뀌면 rlwatcher가 sentinel로 부터 주기적으로 확인해서 logstash의 input host값을 현재 redis master 값으로 변경한후 logstash를 재시작한다. 
 
@@ -71,3 +78,8 @@ $ python dm.py -s ../conf_json
 
 Note! 만일 crontab으로 처리할 경우 별도의 로그 파일을 생성하지 않기 때문에 redirection 을 통해서 따로 저장해야한다.
 
+
+License
+=======
+
+MIT
